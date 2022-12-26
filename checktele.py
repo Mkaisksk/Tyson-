@@ -177,7 +177,7 @@ async def _(event):
         await event.edit("يجب الدفع لاستعمال هذا الامر !")
 
 
-@sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.الانواع"))
+@sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.اليوزرات"))
 async def _(event):
     if ispay2[0] == "yes":
         await event.edit(tele_checker2)
