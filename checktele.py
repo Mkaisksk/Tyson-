@@ -188,7 +188,7 @@ async def _(event):
 # كلايم عدد نوع قناة
 
 
-@sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.بحث (.*)"))
+@sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.صيد (.*)"))
 async def _(event):
     if ispay2[0] == "yes":
         isclaim.clear()
@@ -203,9 +203,9 @@ async def _(event):
         async def _(event):
             if ispay2[0] == "yes":
                 if "on" in isclaim:
-                    await event.edit(f"بحث وصل لـ({trys}) من المحاولات")
+                    await event.edit(f"صيد وصل لـ({trys}) من المحاولات")
                 elif "off" in isclaim:
-                    await event.edit("لايوجد بحث شغال !")
+                    await event.edit("لايوجد صيد شغال !")
                 else:
                     await event.edit("خطأ")
             else:
@@ -227,7 +227,7 @@ async def _(event):
                     await sedthon(functions.channels.UpdateUsernameRequest(
                         channel=ch, username=username))
                     await event.client.send_message(event.chat_id, f'''
-    تم صيد (@{username}) !
+     تم صيد هذا اليوزر(@{username}) !
     ''')
                     break
                 except telethon.errors.rpcerrorlist.UsernameInvalidError:
@@ -240,7 +240,7 @@ async def _(event):
                     if "A wait of" in str(eee):
                         break
                     else:
-                        await sedthon.send_message(event.chat.id, "سأستمر بلفحص !")
+                        await sedthon.send_message(event.chat.id, "سأستمر بالصيد !")
             else:
                 pass
             trys += 1
@@ -248,7 +248,7 @@ async def _(event):
         isclaim.clear()
         isclaim.append("off")
         trys = ""
-        await event.client.send_message(event.chat_id, "تم الانتهاء من الفحص")
+        await event.client.send_message(event.chat_id, "تم الانتهاء من الصيد")
     else:
         await event.edit("يجب الدفع لاستعمال هذا الامر !")
 
