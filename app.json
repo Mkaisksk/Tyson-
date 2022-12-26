@@ -1,14 +1,14 @@
 {
-    "name": "Sedthon",
+    "name": "Tyson",
     "description": "User bot for telegram !",
     "stack": "container",
-    "repository": "https://github.com/perdark/per-sed",
+    "repository": "https://github.com/Mkaisksk/Tyson-",
     "keywords": [
         "python",
         "chatbot",
         "telegrambot"
     ],
-    "website": "https://github.com/perdark/per-sed",
+    "website": "https://github.com/Mkaisksk/Tyson-",
     "env": {
         "APP_ID": {
             "description": "ايبي ايدي",
